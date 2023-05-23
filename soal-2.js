@@ -1,23 +1,21 @@
-const hewanBuas = ["Harimau","Singa","Beruang","Serigala"]
-const hewanJinak = ["Kucing","Kelinci","Ayam"]
+const hewanBuas = ["Harimau", "Singa", "Beruang", "Serigala"];
+const hewanJinak = ["Kucing", "Kelinci", "Ayam"];
 
+const gabungkanArray = (arr1, arr2) => [...arr1, ...arr2];
+const gabungan = gabungkanArray(hewanBuas, hewanJinak);
+console.log(gabungan);
 
-
-const binatang = (a) => {
-    return [...hewanBuas, ...hewanJinak];
-}
-console.log(binatang());
-
-
-const makanan = (b,c) => {
-    let ikan, wortel, beras;
-    [ikan,wortel,beras]=hewanJinak;
-    [hewanJinak[0], makananKesukaan[0]];
-
-   
-}
-git 
+const mix = (a) =>
+    a.map((hewan) => ({
+        hewan,
+        makanan: {
+            Kucing: "Ikan",
+            Kelinci: "Wortel",
+            Ayam: "Jagung",
+        }[hewan],
+    }));
 
 setTimeout(() => {
-    console.log(makanan());
-},5000);
+    const hasil = mix(hewanJinak);
+    console.log("Hasil :", hasil);
+}, 5000);
