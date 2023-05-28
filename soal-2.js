@@ -1,21 +1,16 @@
 const hewanBuas = ["Harimau", "Singa", "Beruang", "Serigala"];
 const hewanJinak = ["Kucing", "Kelinci", "Ayam"];
 
-const gabungkanArray = (arr1, arr2) => [...arr1, ...arr2];
-const gabungan = gabungkanArray(hewanBuas, hewanJinak);
-console.log(gabungan);
+const binatang = () => {
+    return [...hewanBuas, ...hewanJinak]; //spread
+}
 
-const mix = (a) =>
-    a.map((hewan) => ({
-        hewan,
-        makanan: {
-            Kucing: "Ikan",
-            Kelinci: "Wortel",
-            Ayam: "Jagung",
-        }[hewan],
-    }));
+let ikan,Wortel,biji;
+const gabung = () => {
+    [ikan,Wortel,biji] = hewanJinak;
+    console.log(`${ikan}: ikan ,${Wortel}: wortel ,${biji}:   biji`)
+}
 
 setTimeout(() => {
-    const hasil = mix(hewanJinak);
-    console.log("Hasil :", hasil);
+   gabung();
 }, 5000);

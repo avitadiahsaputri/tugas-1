@@ -1,6 +1,6 @@
 const identitas = {
     nama: "Avita",
-    nim : 02042111010,
+    nim : "02042111010",
     email: "avitadiah88@gmail.com"
 }
 
